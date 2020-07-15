@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Cats</title>
+
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            width: 70%;
+            margin: auto;
+            background-color: skyblue;
+            text-align: center;
+
+        }
+
+        div {
+            margin: 20px 0;
+        }
+
+        button {
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px;
+        }
+
+        button:hover {
+            box-shadow: inset 2px 2px 5px;
+        }
+
+        #img img {
+            max-width: 400px;
+            height: auto;
+        }
+
+        #cats {
+            border: 1px solid black;
+            height: 300px;
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+
+        function newCat() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var response = JSON.parse(xhttp.responseText);
+              var cat = response[0]
+              console.log(cat);
+
+              document.getElementById("img").innerHTML = `<img src="${cat.url}">`
+            }
+          };
+          xhttp.open("GET", "https://api.thecatapi.com/v1/images/search", true);
+          xhttp.send();
+        }
+
+        document.onload = newCat()
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+        <h1>Meow</h1>
+        <div id="img"></div>
+
+        <div>
+            <button onClick="newCat()">new cat</button>
+        </div>
+        
+        <div>
+            <p>add to cat collection</p>
+            <button onClick="yesVote()">luv u</button>
+            <button onClick="noVote()">hate u</button>
+        </div>
+
+
+        <div id="cats">
+            <p> this will hold cats in cat collection </p>
+        </div>
+    </div>
+
+  </body>
+</html>
