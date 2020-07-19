@@ -1,0 +1,49 @@
+* {
+    /* elim. browser settings */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 70%;
+    margin: auto;
+    background-color: skyblue;
+    text-align: center;
+
+}
+
+div {
+    margin: 20px 0;
+}
+
+button {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px;
+}
+
+button:hover {
+    box-shadow: inset 2px 2px 5px;
+}
+
+#img img {
+    max-width: 400px;
+    height: auto;
+}
+
+#cats {
+    border: 1px solid black;
+    height: 300px;
+    width: 100%;
+    display: inline-block;
+}
