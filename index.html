@@ -8,31 +8,33 @@
 
     <!-- Import our css styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- header font -->
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
-
+  
+    <!-- Page content -->
     <div class="container">
-        <h1>Meow</h1>
-        <div>
-            <img><!-- inner html contains img url stuff -->
+
+        <div class="header"><h1>meow...</h1></div>
+        <div class="nav">
+            <button onClick="newCat()" title ="new cat"><i class="fas fa-redo-alt"></i></button>
+            <button onclick="vote(1)" title="vote up"><i class="fas fa-thumbs-up"></i></button>
+            <button onclick="vote(0)" title="vote down"><i class="fas fa-thumbs-down"></i></button>
+            <button title="view your favs"><i class="fas fa-list-ul"></i></button>
         </div>
 
-        <div>
-            <button onClick="newCat()">new cat</button>
-        </div>
-        
-        <div>
-            <p>add to cat collection</p>
-            <button onclick="vote(1)">luv u</button>
-            <button onclick="vote(0)">hate u</button>
-        </div>
+            <div class="img-container">
+                <img><!-- inner html contains img url stuff -->
+            </div>
 
 
-        <div id="cats">
-            <p> this will hold cats in cat collection </p>
-
-        </div>
     </div>
 
     <!-- import axios library -->

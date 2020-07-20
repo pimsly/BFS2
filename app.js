@@ -77,19 +77,20 @@ function vote(value) {
     // vote post route
     axios.post('https://api.thecatapi.com/v1/votes', vote_object, { headers: REQUEST_HEADER })
         .then(response => {
-            vote_id = response.data.id;
+            vote_id = response.data.id; // use this for osmething ??C?DC?Dfe.kja,fjh
         })
-        .catch(error => console.log('create vote error', error))
+        .catch(error => console.log('voting error', error))
         .finally(newCat())
 };
 
+// get all votes (use later)
 
-// get all votes
 const getVotes = () => axios.get('https://api.thecatapi.com/v1/votes', { headers: REQUEST_HEADER })
     .then(response => {
         console.log(response.data)
     })
-    .catch(error => console.log('error getting specific vote', error));
+    .catch(error => console.log('error getting votes', error));
+
 
 
 // load cat immediately on pg
