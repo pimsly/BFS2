@@ -2,7 +2,11 @@
 
 <html>
   <head>
+      
     <meta charset="utf-8" />
+
+    <!-- media query was not working without this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
     <title>Cats</title>
 
@@ -22,7 +26,7 @@
     <!-- Page content -->
     <div class="container">
 
-        <div class="header"><h1>meow...</h1></div>
+        <div class="header"><h1>meow</h1></div>
         <div class="nav">
             <button onClick="newCat()" title ="new cat"><i class="fas fa-redo-alt"></i></button>
             <button onclick="vote(1)" title="vote up"><i class="fas fa-thumbs-up"></i></button>
