@@ -14,7 +14,9 @@
 
     <div class="container">
         <h1>Meow</h1>
-        <div id="img"></div>
+        <div>
+            <img><!-- inner html contains img url stuff -->
+        </div>
 
         <div>
             <button onClick="newCat()">new cat</button>
@@ -22,13 +24,14 @@
         
         <div>
             <p>add to cat collection</p>
-            <button onClick="voteUp()">luv u</button>
-            <button onClick="voteDown()">hate u</button>
+            <button onclick="vote(1)">luv u</button>
+            <button onclick="vote(0)">hate u</button>
         </div>
 
 
         <div id="cats">
             <p> this will hold cats in cat collection </p>
+
         </div>
     </div>
 
