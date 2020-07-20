@@ -95,6 +95,7 @@ button:hover {
     transform: scale(1.10);
 }
 
+
 button:active {
     transform: scale(.9);
 }
