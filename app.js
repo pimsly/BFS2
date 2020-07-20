@@ -83,7 +83,7 @@ function vote(value) {
         .finally(newCat())
 };
 
-// get all votes
+// get all votes (use later)
 const getVotes = () => axios.get('https://api.thecatapi.com/v1/votes', { headers: REQUEST_HEADER })
     .then(response => {
         console.log(response.data)

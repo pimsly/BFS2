@@ -11,8 +11,6 @@
 } 
 
 body {
-    /* background-color: #32936F; */
-    /* background-color: #f1bb9c; */
     background: rgb(172,250,250);
     background: -moz-linear-gradient(9deg, rgba(172,250,250,1) 0%, rgba(192,250,221,1) 52%, rgba(200,252,217,1) 100%);
     background: -webkit-linear-gradient(9deg, rgba(172,250,250,1) 0%, rgba(192,250,221,1) 52%, rgba(200,252,217,1) 100%);
