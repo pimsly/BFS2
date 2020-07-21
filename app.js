@@ -1,38 +1,3 @@
-// old code
-
-/*
-function newCat() {
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-    var response = JSON.parse(xhttp.responseText);
-    var cat = response[0]
-    document.getElementById("img").innerHTML = `<img src="${cat.url}">`
-    }
-};
-xhttp.open("GET", "https://api.thecatapi.com/v1/images/search", true);
-xhttp.send();
-}
-
-function voteDown() {
-
-}
-
-function getVotes() {
-
-}
-
-document.onload = newCat()
-
-*/
-
-
-
-
-// new code using axios
-
-
-
 // constant HEADER value
 const HEADER = REQUEST_HEADER;
 
