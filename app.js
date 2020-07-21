@@ -34,11 +34,7 @@ document.onload = newCat()
 
 
 // constant HEADER value
-const REQUEST_HEADER = {
-    'Content-Type': 'application/json',
-    'x-api-key': '94ab5be8-cf8a-443b-9ee5-acd18976a2ed'
-};
-
+const HEADER = REQUEST_HEADER;
 
 // gets new cat and replaces image
 const newCat = () => { 
@@ -75,7 +71,7 @@ function vote(value) {
     console.log(vote_object);
 
     // vote post route
-    axios.post('https://api.thecatapi.com/v1/votes', vote_object, { headers: REQUEST_HEADER })
+    axios.post('https://api.thecatapi.com/v1/votes', vote_object, { headers: HEADER })
         .then(response => {
             vote_id = response.data.id; // use this for osmething ??C?DC?Dfe.kja,fjh
         })
@@ -85,7 +81,7 @@ function vote(value) {
 
 // get all votes (use later)
 
-const getVotes = () => axios.get('https://api.thecatapi.com/v1/votes', { headers: REQUEST_HEADER })
+const getVotes = () => axios.get('https://api.thecatapi.com/v1/votes', { headers: HEADER })
     .then(response => {
         console.log(response.data)
     })
