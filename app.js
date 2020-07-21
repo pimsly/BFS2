@@ -1,40 +1,8 @@
-// old code
-
-/*
-function newCat() {
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-    var response = JSON.parse(xhttp.responseText);
-    var cat = response[0]
-    document.getElementById("img").innerHTML = `<img src="${cat.url}">`
-    }
+// constant HEADER Value
+const REQUEST_HEADER = {
+    'Content-Type': 'application/json',	
+    'x-api-key': '94ab5be8-cf8a-443b-9ee5-acd18976a2ed'	
 };
-xhttp.open("GET", "https://api.thecatapi.com/v1/images/search", true);
-xhttp.send();
-}
-
-function voteDown() {
-
-}
-
-function getVotes() {
-
-}
-
-document.onload = newCat()
-
-*/
-
-
-
-
-// new code using axios
-
-
-
-// constant HEADER value
-const HEADER = REQUEST_HEADER;
 
 // gets new cat and replaces image
 const newCat = () => { 
@@ -53,7 +21,6 @@ const newCat = () => {
         .catch(error => console.log('on new cat error', error));
 }
 
-
 function vote(value) {
     // set img_id from value in html element
     img_id = document.querySelector('img').id;
@@ -71,7 +38,7 @@ function vote(value) {
     console.log(vote_object);
 
     // vote post route
-    axios.post('https://api.thecatapi.com/v1/votes', vote_object, { headers: HEADER })
+    axios.post('https://api.thecatapi.com/v1/votes', vote_object, { headers: REQUEST_HEADER })
         .then(response => {
             vote_id = response.data.id; // use this for osmething ??C?DC?Dfe.kja,fjh
         })
@@ -81,13 +48,11 @@ function vote(value) {
 
 // get all votes (use later)
 
-const getVotes = () => axios.get('https://api.thecatapi.com/v1/votes', { headers: HEADER })
+const getVotes = () => axios.get('https://api.thecatapi.com/v1/votes', { headers: REQUEST_HEADER })
     .then(response => {
         console.log(response.data)
     })
     .catch(error => console.log('error getting votes', error));
-
-
 
 // load cat immediately on pg
 document.onload = newCat()
